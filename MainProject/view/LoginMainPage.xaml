@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MainProject.view.LoginMainPage"
+             Title="LoginMainPage" Shell.BackgroundColor="Blue" Shell.TitleColor="White"
+             >
+    <StackLayout BackgroundColor="White">
+        <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" BackgroundColor="Red">
+            <Label 
+            Text="Welcome to Course App" TextColor="Black" FontSize="20" FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        </StackLayout>
+
+        <StackLayout Spacing="20" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+            <Button Text="Login" Command="{Binding LoginNowCommand}"  TextColor="Black" BackgroundColor="Blue" HeightRequest="50" WidthRequest="350" FontAttributes="Bold" FontSize="Medium" CornerRadius="20"/>
+            <Button Text="Create Account" TextColor="Black" BackgroundColor="Blue" FontAttributes="Bold" HeightRequest="50" WidthRequest="350" FontSize="Medium" CornerRadius="20"/>
+        </StackLayout>
+
+        <Frame Margin="0" Padding="0">
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <DatePicker Date="{Binding StartDate}" Grid.Column="0" BackgroundColor="Blue" />
+                    <Entry Text="{Binding StartDate}" Grid.Column="0"  InputTransparent="True" />
+                    <DatePicker Date="{Binding StartDate}" Grid.Column="1" BackgroundColor="Blue" />
+                    <Label Text="{Binding StartDate}" Grid.Column="1"  />
+                </Grid>
+      
+        </Frame>
+
+        <Frame BackgroundColor="Gray" WidthRequest="200" HorizontalOptions="Start" VerticalOptions="Start" CornerRadius="10" >
+            <Label Text="hi" TextColor="Red" FontSize="20" />
+        </Frame>
+
+        <StackLayout>
+            <Label Text="App version" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" />
+            <Label Text="1.0" TextColor="Black" FontSize="15" HorizontalTextAlignment="Center" />
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>

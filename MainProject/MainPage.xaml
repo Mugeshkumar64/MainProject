@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MainProject.viewModel"
+             BackgroundColor="LightGreen"
+             x:Class="MainProject.MainPage">
+    <ContentPage.Content>
+        <ScrollView>
+        <VerticalStackLayout BackgroundColor="Transparent" Margin="20,10,20,0">
+
+                <StackLayout Margin="0,0,0,0">
+                    <Label Text="Welcome" TextColor="Black" FontSize="18" />
+                    <Label Text="Please log in to continue and get" TextColor="Black" FontSize="16" />
+                    <Label Text="the best from our app" TextColor="Black" FontSize="16" />
+                </StackLayout>
+                <Label Text="Login or Sign up" TextColor="Black" FontSize="18"/>
+                <Frame BackgroundColor="White" CornerRadius="8">
+                    <StackLayout>
+                        <Label Text="Enter User Name :" TextColor="Black" FontSize="15" />
+                        <Entry Placeholder="User Name" Text="{Binding }" TextColor="Black" FontSize="15" />
+                        <Label Text="Enter Password :" TextColor="Black" FontSize="15" />
+                        <Entry Placeholder="Password" Text="{Binding }" TextColor="Black" FontSize="15" />
+                    </StackLayout>
+                </Frame>
+
+                <Button Text="Sumbit" CornerRadius="5" BackgroundColor="Red"/>
+            
+            </VerticalStackLayout>
+    </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MainProject.view.LoginNowPage" 
+             Shell.BackgroundColor="Blue" Shell.TitleColor="White"
+             Title="LoginNowPage" BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid>
+            <!-- Main layout for centering the email and password entries -->
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Spacing="20">
+                <Label Text="Please Enter Your Credtionals" TextColor="Red" FontSize="20" FontAttributes="Bold" />
+                <!-- Email entry -->
+                <Entry Text="{Binding Email}" 
+                       ReturnType="Next"  
+                       Placeholder="Enter Email" 
+                       BackgroundColor="Gray" 
+                       HeightRequest="40" 
+                       WidthRequest="350" 
+                       TextColor="White" 
+                       PlaceholderColor="white" />
+
+                <!-- Password entry -->
+                <Entry Text="{Binding Password}" 
+                       Placeholder="password" 
+                       TextColor="White" 
+                       BackgroundColor="Gray"
+                       PlaceholderColor="white" 
+                       IsPassword="True" 
+                       HeightRequest="40" 
+                       WidthRequest="350" />
+
+                <Button Text="Login" 
+                       Command="{Binding LoginCommand}" 
+                       TextColor="Black" 
+                       BackgroundColor="Blue" 
+                       HeightRequest="40" 
+                       WidthRequest="350" 
+                       FontAttributes="Bold" 
+                       FontSize="Medium" Padding="5" TextTransform="Uppercase" CharacterSpacing="2"
+                       CornerRadius="20"/>
+                <Button Text="Back" 
+                       Command="{Binding BackButtonCommand}" 
+                       TextColor="Black" 
+                       BackgroundColor="Blue" 
+                       HeightRequest="40" 
+                       WidthRequest="350" 
+                       FontAttributes="Bold" 
+                       FontSize="Medium" Padding="5" TextTransform="Uppercase" CharacterSpacing="2"
+                       CornerRadius="20"/>
+
+            </StackLayout>
+
+            <!-- Button at the bottom of the page -->
+            <StackLayout HorizontalOptions="Center" VerticalOptions="End" Padding="0,0,0,40">
+                <!-- Forgot Password Label -->
+                <Label Text="FORGOT PASSWORD" 
+                       TextColor="Green" 
+                       FontSize="15" 
+                       HorizontalOptions="Center" />
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
